@@ -1,0 +1,32 @@
+Python Developer - Coding Assignment
+You are provided with the following:
+1) MongoDB collection (JSON file) which you can import to your local DB via MongoDB
+Compass. The collection has exactly 500 documents containing data points for NIFTY 500
+Stocks. The following fields are available:
+a) stock_fincode – A unique fincode assigned to every company.
+b) stock_name – Complete name of the company.
+c) stock_symbol – Unique Symbol name of the company.
+d) stock_isin – ISIN number of the company.
+e) stock_shortname – Short name of the company.
+f) in_nifty50 – Identifies whether the company is a part of NIFTY 50.
+2) GET API -
+https://alphabet.researchandranking.com/assignment/stockData
+Require parameter: ‘entry’
+Possible values of param: ‘old’ & ‘new’
+Example query:
+https://alphabet.researchandranking.com/assignment/stockData?entry=old
+This API provides you Open, Close, High, Low & Volume values for two different dates for
+over 3000 stocks.
+Your Task:
+Create a program to fetch both – Old & New stock price- values from the API.
+Calculate the Performance & Volume % Change between Old & New entries ONLY for the
+stocks available in your MongoDB collection.
+Furthermore, the program should create an excel file – containing 500 rows (for every stock in
+stock_list collection) along with the following details:
+1) Symbol
+2) Entry Price (‘close’ from ‘old’ data dump)
+3) Exit Price (‘close’ from ‘new’ data dump)
+4) Performance
+5) Volume % Change
+6) In Nifty 50 (True/False, depending upon if the Stock is a part of Nifty 50 or not.
+Make sure the excel sheet is sorted by ‘Symbol’ in ascending order.
